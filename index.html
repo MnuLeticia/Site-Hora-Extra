@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Pagamento por Horas Extras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Pagamento por Horas Extras</h1>
+        <form id="formFuncionario">
+            <div class="form-group">
+                <label for="nome">Nome do Funcionário:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="salarioBase">Salário Base (R$):</label>
+                <input type="number" id="salarioBase" name="salarioBase" min="0" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="horasMensais">Horas Mensais:</label>
+                <input type="number" id="horasMensais" name="horasMensais" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="horasExtras">Horas Extras:</label>
+                <input type="number" id="horasExtras" name="horasExtras" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="porcentagemHoraExtra">Porcentagem da Hora Extra (%):</label>
+                <input type="number" id="porcentagemHoraExtra" name="porcentagemHoraExtra" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="adicionalNoturno">Possui Adicional Noturno?</label>
+                <select id="adicionalNoturno" name="adicionalNoturno">
+                    <option value="nao">Não</option>
+                    <option value="sim">Sim</option>
+                </select>
+            </div>
+            <button type="submit">Adicionar Funcionário</button>
+        </form>
+
+        <footer class="rodape">
+            <p>Desenvolvido por Letícia Moreira </p>
+        </footer>
+
+        <div id="resultados"></div>
+        <div id="valorTotal"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
